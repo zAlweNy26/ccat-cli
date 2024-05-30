@@ -1,0 +1,34 @@
+{
+  "name": "ccat-cli",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun index.ts",
+    "build": "bun run build:linux-x64 && bun run build:linux-arm64 && bun run build:darwin-x64 && bun run build:darwin-arm64 && bun run build:windows-x64",
+    "build:linux-x64": "bun build --compile --minify --sourcemap --target=bun-linux-x64 ./index.ts --outfile=dist/linux-x64",
+    "build:linux-arm64": "bun build --compile --minify --sourcemap --target=bun-linux-arm64 ./index.ts --outfile=dist/linux-arm64",
+    "build:darwin-x64": "bun build --compile --minify --sourcemap --target=bun-darwin-x64 ./index.ts --outfile=dist/darwin-x64",
+    "build:darwin-arm64": "bun build --compile --minify --sourcemap --target=bun-darwin-arm64 ./index.ts --outfile=dist/darwin-arm64",
+    "build:windows-x64": "bun build --compile --minify --sourcemap --target=bun-windows-x64 ./index.ts --outfile=dist/windows-x64"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/figlet": "^1.5.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ccat-api": "^0.10.6",
+    "chalk": "^5.3.0",
+    "changelogen": "^0.5.5",
+    "citty": "^0.1.6",
+    "confbox": "^0.1.7",
+    "consola": "^3.2.3",
+    "defu": "^6.1.4",
+    "figlet": "^1.7.0",
+    "mime": "^4.0.3",
+    "ora": "^8.0.1",
+    "pkg-types": "^1.1.1"
+  }
+}

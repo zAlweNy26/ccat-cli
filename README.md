@@ -1,2 +1,3 @@
-# ccat-cli
- A CLI to manage your Cheshire Cat installation!
+# Cheshire Cat CLI
+
+A CLI to manage your Cheshire Cat APIs!
